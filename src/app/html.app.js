@@ -1,7 +1,7 @@
  
  const { load } = require('./selector.build');
 
- class HtmlComposite {
+ class HtmlApp {
      constructor(tagName) {
          this._tagName = tagName;
          this.attrArray = [];
@@ -45,4 +45,4 @@
      }
  }
  
- module.exports.HtmlComposite = HtmlComposite;
+ module.exports.HtmlApp = HtmlApp;
