@@ -1,0 +1,23 @@
+{
+  "name": "composition",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianoyamane/composition-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucianoyamane/composition-js/issues"
+  },
+  "homepage": "https://github.com/lucianoyamane/composition-js#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "xml2js": "^0.4.23"
+  }
+}
