@@ -1,5 +1,5 @@
 const { HtmlBuilder } = require('../builder/html.builder');
-const { TextSetter } = require('../builder/setter/text.setter');
+const { init:initTextSetter } = require('../builder/setter/text.setter');
 
 class H2HtmlBuilder extends HtmlBuilder {
 
@@ -7,10 +7,8 @@ class H2HtmlBuilder extends HtmlBuilder {
         super('h2');
     }
 
-    configSetters() {
-        let setters = [];
-        setters.push(new TextSetter().addValue(this._text));
-        return setters;
+    configSetters(setters) {
+        setters.push(initTextSetter().addValue(this._text));
     }
 
     text(value) {
@@ -19,8 +17,4 @@ class H2HtmlBuilder extends HtmlBuilder {
     }
 }
 
-module.exports = {
-    builder: function() {
-        return new H2HtmlBuilder();
-    }
-}
+module.exports.builder = () => new H2HtmlBuilder();

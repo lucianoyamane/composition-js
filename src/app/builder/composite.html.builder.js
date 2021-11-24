@@ -15,6 +15,7 @@ const { HtmlBuilder } = require('./html.builder')
     get components() {
         return this._components;
     }
+    
     setHtml() {
         let htmlApp = super.setHtml();
         this.components.forEach(component => {

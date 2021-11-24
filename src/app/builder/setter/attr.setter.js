@@ -13,4 +13,4 @@ class AttrSetter extends SetterAbstract {
     }
 }
 
-module.exports.AttrSetter = AttrSetter;
+module.exports.init = (attribute) => new AttrSetter(attribute);

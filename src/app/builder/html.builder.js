@@ -19,8 +19,7 @@ class HtmlBuilder {
         return this._setters;
     }
 
-    configSetters() {
-        return [];
+    configSetters(setters) {
     }
     
     addSetter(setter) {
@@ -29,8 +28,8 @@ class HtmlBuilder {
 
     setHtml() {
         let htmlApp = initApp(this._tagName);
-        let setters = this.configSetters();
-        setters.forEach(setter => setter.execute(htmlApp));
+        this.configSetters(this.setters);
+        this.setters.forEach(setter => setter.execute(htmlApp));
         return htmlApp;
     }
 

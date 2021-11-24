@@ -13,4 +13,4 @@ class TextSetter extends SetterAbstract {
     }
 }
 
-module.exports.TextSetter = TextSetter;
+module.exports.init = () => new TextSetter();

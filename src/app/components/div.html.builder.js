@@ -1,5 +1,5 @@
 const { CompositeHtmlBuilder } = require('../builder/composite.html.builder');
-const { AttrSetter } = require('../builder/setter/attr.setter');
+const { init:initAttrSetter } = require('../builder/setter/attr.setter');
 
 class DivHtmlBuilder extends CompositeHtmlBuilder {
 
@@ -7,10 +7,8 @@ class DivHtmlBuilder extends CompositeHtmlBuilder {
         super('div');
     }
 
-    configSetters() {
-        let setters = [];
-        setters.push(new AttrSetter('class').addValue(this._class));
-        return setters;
+    configSetters(setters) {
+        setters.push(initAttrSetter('class').addValue(this._class));
     }
 
     class(classValue) {
@@ -19,8 +17,4 @@ class DivHtmlBuilder extends CompositeHtmlBuilder {
     }
 }
 
-module.exports = {
-    builder: function() {
-        return new DivHtmlBuilder();
-    }
-}
+module.exports.builder = () => new DivHtmlBuilder();
