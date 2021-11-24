@@ -1,7 +1,7 @@
-const { CompositeHtmlBuilder } = require('../builder/composite.html.builder');
+const { HtmlBuilder } = require('../builder/html.builder');
 const { TextSetter } = require('../builder/setter/text.setter');
 
-class H2HtmlBuilder extends CompositeHtmlBuilder {
+class H2HtmlBuilder extends HtmlBuilder {
 
     constructor() {
         super('h2');
