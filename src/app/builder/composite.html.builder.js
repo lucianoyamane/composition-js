@@ -15,12 +15,12 @@ const { HtmlBuilder } = require('./html.builder')
     get components() {
         return this._components;
     }
-    defineHtml() {
-        let tag = super.defineHtml();
+    setHtml() {
+        let htmlApp = super.setHtml();
         this.components.forEach(component => {
-            tag.adicionaItem(component.codigo());
+            htmlApp.addItem(component.selector());
         });
-        return tag;
+        return htmlApp;
     }
 
  }

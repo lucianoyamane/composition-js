@@ -7,9 +7,9 @@ class H2HtmlBuilder extends CompositeHtmlBuilder {
         super('h2');
     }
 
-    associaSetters() {
+    configSetters() {
         let setters = [];
-        setters.push(new TextSetter().value(this._text));
+        setters.push(new TextSetter().addValue(this._text));
         return setters;
     }
 

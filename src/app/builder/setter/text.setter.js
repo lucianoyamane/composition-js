@@ -5,10 +5,10 @@ class TextSetter extends SetterAbstract {
         super('text');
     }
 
-    config(mainTagSelector){
-        super.config(mainTagSelector);
+    config(htmlApp){
+        super.config(htmlApp);
         if (this.value) {
-            mainTagSelector.defineText(this.value);
+            htmlApp.text(this.value);
         }
     }
 }
