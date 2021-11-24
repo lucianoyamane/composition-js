@@ -7,23 +7,11 @@ class HtmlBuilder {
         this._setters = [];
     }
 
-    set mainTagSelector(mainTagSelector) {
-        this._mainTagSelector = mainTagSelector;
-    }
-
-    get mainTagSelector() {
-        return this._mainTagSelector;
-    }
-
     get setters() {
         return this._setters;
     }
 
     configSetters(setters) {
-    }
-    
-    addSetter(setter) {
-        this._setters.push(setter);
     }
 
     setHtml() {

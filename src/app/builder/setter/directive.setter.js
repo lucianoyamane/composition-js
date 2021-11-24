@@ -2,14 +2,14 @@
 const { SetterAbstract } = require('./setter.abstract');
 
 class DirectiveSetter extends SetterAbstract {
-    constructor(attributte) {
-        super(attributte);
+    constructor(attribute) {
+        super(attribute);
     }
 
-    config(mainTagSelector) {
-        super.config(mainTagSelector);
-        mainTagSelector.defineAttr(this.attributte, '');
+    config(htmlApp) {
+        super.config(htmlApp);
+        htmlApp.addAttribute(this.attribute, '');
     }
 }
 
-module.exports.DirectiveSetter = DirectiveSetter;
+module.exports.init = (attribute) => new DirectiveSetter(attribute);

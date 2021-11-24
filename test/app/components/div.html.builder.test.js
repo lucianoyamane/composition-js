@@ -22,6 +22,13 @@ describe("div.html.builder", function(){
         expect(expected).to.eql(result)
     })
 
+    it('Test disabled', function() {
+        let expected = '<div class="test_class" disabled=""></div>';
+        let result = builder().class('test_class').disabled().textCode();
+
+        expect(expected).to.eql(result)
+    })
+
 
 
 })
