@@ -9,7 +9,7 @@ class DivHtmlBuilder extends CompositeHtmlBuilder {
 
     configSetters() {
         let setters = [];
-        setters.push(new AttrSetter('class').value(this._class));
+        setters.push(new AttrSetter('class').addValue(this._class));
         return setters;
     }
 

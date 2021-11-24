@@ -5,10 +5,10 @@ class AttrSetter extends SetterAbstract {
         super(attributte);
     }
 
-    config(mainTagSelector) {
-        super.config(mainTagSelector);
+    config(htmlApp) {
+        super.config(htmlApp);
         if (this.value) {
-            mainTagSelector.defineAttr(this.attributte, this.value);
+            htmlApp.addAttribute(this.attribute, this.value);
         }
     }
 }

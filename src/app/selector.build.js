@@ -20,7 +20,7 @@ class SelectorBuild {
     }
 
     __initTag(tagName) {
-        return `<${tagName}></${tagname}>`;
+        return `<${tagName}></${tagName}>`;
     }
 
     selector() {

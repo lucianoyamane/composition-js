@@ -1,4 +1,4 @@
-var htmlApp = require('../html.app');
+const { initApp } = require('../html.app');
 
 class HtmlBuilder {
 
@@ -28,18 +28,18 @@ class HtmlBuilder {
     }
 
     setHtml() {
-        let tag = new htmlApp.HtmlApp(this._tagName);
-        let setters = this.associaSetters();
-        setters.forEach(setter => setter.executa(tag));
-        return tag;
+        let htmlApp = initApp(this._tagName);
+        let setters = this.configSetters();
+        setters.forEach(setter => setter.execute(htmlApp));
+        return htmlApp;
     }
 
     selector() {
-        let tag = this.setHtml();
-        return tag.selector();
+        let htmlApp = this.setHtml();
+        return htmlApp.execute().selector();
     }
 
-    codigo() {
+    textCode() {
         let selector = this.selector();
         if (selector) {
             return selector.toString();

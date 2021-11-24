@@ -30,7 +30,7 @@
      }
 
      execute() {
-        return this._buildSelector().selector();
+        return this._buildSelector();
      }
  
      _buildSelector() {
@@ -45,4 +45,4 @@
      }
  }
  
- module.exports.HtmlApp = HtmlApp;
+ module.exports.initApp = (tagName) => new HtmlApp(tagName);

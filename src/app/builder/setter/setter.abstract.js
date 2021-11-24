@@ -4,7 +4,7 @@ class SetterAbstract {
         this._attribute = attribute;
     }
 
-    config(mainTagSelector) {
+    config(htmlApp) {
         if (this._required) {
             this._toValid();
         }
@@ -21,7 +21,7 @@ class SetterAbstract {
         return this;
     }
 
-    value(value) {
+    addValue(value) {
         this._value = value;
         return this;
     }
@@ -34,8 +34,8 @@ class SetterAbstract {
         return this._value;
     }
 
-    execute(mainTagSelector) {   
-        this.config(mainTagSelector);
+    execute(htmlApp) {   
+        this.config(htmlApp);
     }
 }
 
